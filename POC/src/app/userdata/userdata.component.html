@@ -1,0 +1,44 @@
+<app-header></app-header><br />
+
+
+<div
+
+  class="card"
+
+  style="width: 18rem;"
+
+  *ngFor="let users of user; let i = index"
+
+>
+
+  <div class="card-body" >
+
+    <h5 class="card-title">{{users.name}}</h5>
+
+    <a class="card-text"> {{users.emailId}} </a>
+
+    <p>{{users.password}}</p>
+    <button (click)="delete(users.id)"> Delete </button>
+    <button (click)="showw(users.id,i)">show</button>
+  </div>
+
+</div>
+
+<div class="login" *ngIf="show">
+
+    <label for="email">Email</label><br />
+  
+    <input type="email" placeholder={{placeholdere}} [(ngModel)]="email" /><br />
+  
+    <label for="username"> Username</label><br />
+  
+    <input type="text" placeholder={{placeholdern}} [(ngModel)]="username" /><br />
+  
+    <label for="password">Password</label><br />
+  
+    <input type="password" placeholder={{placeholderp}} [(ngModel)]="password" /><br /><br />
+  
+    <button btn btn-Green type="submit" (click)="update()">Update</button><br />
+  
+  </div>
+  

@@ -1,0 +1,59 @@
+<app-header></app-header><br />
+
+<div class="btn-grad">
+
+  <div
+
+    style=" display:grid;grid-template-columns: repeat(auto-fill, minmax(400px,1fr)); row-gap: 2em;"
+
+  >
+
+    <div
+
+      class="card"
+
+      style="width: 18rem;"
+
+      *ngFor="let user of details; let i = index"
+
+    >
+
+      <img class="card-img-top" [src]="user.image" alt="Card image cap" />
+
+
+
+      <div class="card-body">
+
+        <h5 style="color: red;" class="card-title">
+
+          {{ user.firstName + ' ' + user.lastName }}
+
+        </h5>
+
+        <p style="color:purple" class="card-text">
+
+          {{ 'My domain is ' + user.domain + ' and IP is ' + user.ip }}
+
+        </p>
+
+      </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">
+
+          <a [href]="user.email">{{ user.email }}</a>
+
+        </li>
+
+        <li class="list-group-item">{{ user.phone }}</li>
+
+        <li class="list-group-item">{{ 'BloodGroup: ' + user.bloodGroup }}</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>

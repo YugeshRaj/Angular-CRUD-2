@@ -1,0 +1,23 @@
+<div class="login">
+
+    <label for="email">Email</label><br />
+  
+    <input type="email" [(ngModel)]="email" /><br />
+  
+    <label for="username">Username</label><br />
+  
+    <input type="text" [(ngModel)]="username" /><br />
+  
+    <label for="password">Password</label><br />
+  
+    <input type="password" [(ngModel)]="password" /><br /><br />
+  
+    <button btn btn-Green type="submit" (click)="signup()">Register</button><br />
+  
+  </div>
+  
+  <div>
+  
+    <div>{{ errormsg }}</div>
+  
+  </div>

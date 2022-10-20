@@ -1,0 +1,17 @@
+<div class="login">
+
+    <label for="Username">Username</label><br />
+  
+    <input type="text" [(ngModel)]="username" /><br />
+  
+    <label for="password">password</label><br />
+  
+    <input type="password" [(ngModel)]="password" /><br /><br />
+  
+    <button btn btn-Black type="submit" (click)="login()">Login</button><br />
+  
+    <button type="submit" btn btn-Green (click)="GoToSignup()">SignUp</button>
+  
+    <div>{{ errormsg }}</div>
+  
+  </div>
